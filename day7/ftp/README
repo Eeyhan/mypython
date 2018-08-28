@@ -1,0 +1,41 @@
+
+ftp
+├─bin                           # 快捷启动目录
+│  └─boot_client.py             # 客户端接口程序
+│  └─boot_server.py             # 服务器接口程序
+├─conf                          # 配置目录
+│  └─settings.py                # 配置文件
+├─core                          # 主程序目录
+│  └─ftp.py                     # 主程序
+├─db                            # 本地客户端路径，用于本地用户文件传输存储
+│  └─若干个数据文件
+├─docs                          # 文档目录
+│  └─文档文件
+├─FTP_workstation               # ftp服务器工作站
+│  ├─jack                       # 若干个用户文件
+│  │  └─test
+│  │      └─one
+│  ├─nero
+│  └─zaki
+│  └─.userdata                  # 所有用户数据
+├─lib                           # 功能库
+│  └─ftp_client.py              # 客户端主程序
+│  └─ftp_server.py              # 服务器主程序
+│  └─load_dump.py               # 加载和存储数据文件
+│  └─logger.py                  # 日志文件
+│  └─login_auth.py              # 登录验证
+├─log                           # 日志文件
+│   └─client.log                # 客户端操作日志
+│   └─server.log                # 服务器操作日志
+└─README                        # 帮助文档
+
+
+操作步骤：
+    1.务必首先启动boot_server.py文件快捷启动ftp服务器
+    2.再启动boot_client.py文件启动ftp客户端
+
+说明：
+    1.login_auth.py暂时没有用到，作为后期沿用
+    2.程序内默认用quit/exit退出
+    3.进度条在pycharm内显示不了，将print输出的end='\r'去掉则可以显示，但是不理想，
+    所以如果希望看到进度条，建议客户端在命令行下运行
